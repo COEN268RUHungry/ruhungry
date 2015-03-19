@@ -1,0 +1,16 @@
+<div id="search-page">
+    <nav>
+		{{#link-to 'sidemenu'}}<button class="navbar-toggle"></button>{{/link-to}}
+    </nav>
+    <div>
+        <h3>RUHungry</h3>
+        <p>Dilicious Food Delivered Quickly</p>
+        <div id="find-restaurant">
+            <p>Your Zipcode</p>
+            {{input type="text" value=zipcode placeholder="95014" class="form-control input-sm" }}
+            <p>What Restaurant Would You Like?</p>
+            {{input type="text" value=restaurantName placeholder="Tpumps" class="form-control input-sm"}}
+            <button class="btn btn-primary" {{action 'find' this}}>Find</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<div id="payment-page">
+    <header>
+        {{#link-to 'cart'}}
+            <div>&lt;</div>
+        {{/link-to}}
+            <div>Confirm Purchase</div>
+    </header>
+
+    {{#if isShowingError}}
+        <p class="error">Please Enter All of the Information</p>
+    {{/if}}
+
+    <div class="enter-info">
+        <div class = "enter-label" {{action 'showPayment'}}>
+            <p>Payment</p>
+                {{#if isShowingPayment}}
+                    <p>HIDE&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;</span></p>
+                {{else}}
+                    <p>SHOW&nbsp;&nbsp;&nbsp;&nbsp;<span>&gt;</span></p>
+                {{/if}}
+        </div>
+        {{#if isShowingPayment}}
+        <div class="enter-area">
+            <div class="form-group">
+                <label class="control-label">Name On Card</label>
+                {{input type="text" value=cardName class="form-control input-sm" placeholder="RUOFEI XIE"}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">Card Number</label>
+                {{input type="text" value=cardNumber class="form-control input-sm"}}
+            </div>
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="enter-info">
+        <div class = "enter-label" {{action 'showAddress'}}>
+            <p>Address</p>
+            
+                {{#if isShowingAddress}}
+                    <p>HIDE&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;</span></p>
+                {{else}}
+                    <p>SHOW&nbsp;&nbsp;&nbsp;&nbsp;<span>&gt;</span></p>
+                {{/if}}
+        </div>
+        {{#if isShowingAddress}}
+        <div class="enter-area">
+            <div class="form-group">
+                <label class="control-label">Street</label>
+                {{input type="text" value=street class="form-control input-sm" placeholder="500 El Camino Real"}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">City</label>
+                {{input type="text" value=city class="form-control input-sm" placeholder="Santa Clara, CA"}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">ZipCode</label>
+                {{input type="text" value=zipcode class="form-control input-sm" placeholder="94085"}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">Phone Number</label>
+                {{input type="tel" value=phone class="form-control input-sm" placeholder="(408)111-111"}}
+            </div>
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="delivery-info">
+        <div class="delivery-time">
+            <p>CHOOSE DELIVERY TIME</p>
+            {{view "select"
+                    class="form-control"
+                    content=availableDeliveryTime
+                    value=selectedTime}}
+        </div>
+    </div>
+
+    <div class="amount-info">
+        <ul>
+            <li>
+                <p class="item">Subtotal:</p>
+                <p class="amount">{{totalAmount}}</p>
+            </li>
+            <li>
+                <p class="item">State&Local Tax:</p>
+                <p class="amount">{{tax}}</p>
+            </li>
+            <li>
+                <p><strong>Total:</strong></p>
+                <p class="amount border"><strong>{{total}}</strong></p>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <button class="btn btn-primary btn-lg btn-block" {{action 'placeOrder'}}>PLACE ORDER</button>
+    </footer>
+</div>

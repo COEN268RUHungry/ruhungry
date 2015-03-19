@@ -1,0 +1,25 @@
+<div id="order-history">
+<header>
+{{#link-to 'sidemenu'}}
+	 <span class="menu glyphicon glyphicon-menu-hamburger"></span>
+	 {{/link-to}}
+	<p>My Orders</p>
+</header>
+<div class="detail">
+<ul>
+<li class="title">
+<p>Date</p>
+<p>TotalAmount</p>
+<p>Status</p>
+
+</li>
+{{#each foo in model}}
+<li>
+<p>{{time-format foo.date 'l'}}</p>
+<p>{{foo.totalAmount}}</p>
+<p>{{foo.status}}</p>
+</li>
+{{/each}}
+</ul>
+</div>
+</div>

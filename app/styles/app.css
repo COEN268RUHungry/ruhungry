@@ -1,0 +1,915 @@
+[data-ember-action] {
+  cursor: pointer;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+.ember-view {
+  height: 100%;
+}
+#search-page {
+  height: 100%;
+  background-image: url('../images/background-food.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#search-page nav button {
+  float: left;
+  margin-left: 0;
+  display: block;
+}
+#search-page > div {
+  background-color: rgba(28, 28, 28, 0.6);
+  height: 100%;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 30px;
+  text-align: center;
+}
+#search-page > div h3 {
+  margin: 30px;
+}
+#search-page > div p {
+  font-size: 15px;
+}
+#search-page > div div input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  width: 50%;
+}
+#search-page > div #find-restaurant {
+  margin-top: 20%;
+}
+#search-page > div #find-restaurant a {
+  display: block;
+  margin-bottom: 10%;
+}
+#discover-page header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+#discover-page header nav {
+  border-bottom: 1px solid #f7f7f7;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 40px;
+}
+#discover-page header nav .menu {
+  display: inline-block;
+  float: left;
+  margin-left: 20px;
+  height: 40px;
+  color: #1abc9c;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+#discover-page header nav p {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+  left: 50%;
+  margin-left: -40px;
+  font-size: 20px;
+  position: absolute;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+  line-height: 40px;
+}
+#discover-page header nav .search {
+  float: right;
+  color: #1abc9c;
+  height: 40px;
+  padding: 0 21px;
+  font-size: 20px;
+  line-height: 40px;
+}
+#discover-page header nav .cart {
+  float: right;
+  color: #1abc9c;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+#discover-page div {
+  margin-top: 40px;
+}
+#discover-page div .not-found {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -120px;
+}
+#discover-page div section {
+  border-top: 1px solid black;
+  margin-bottom: 2%;
+}
+#discover-page div section img {
+  width: 100%;
+}
+#discover-page div section div {
+  margin: 0;
+  position: relative;
+}
+#discover-page div section div div {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-left: 2%;
+  font-size: 16px;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#discover-page div section div .type {
+  font-size: 12px;
+}
+#discover-page div section div .distance {
+  top: 20%;
+  position: absolute;
+  right: 0;
+  color: red;
+  font-size: 12px;
+  margin-right: 2%;
+}
+#restaurant-page {
+  width: auto;
+}
+#restaurant-page header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+#restaurant-page header nav {
+  border-bottom: 1px solid #f7f7f7;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 40px;
+}
+#restaurant-page header nav .back {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  height: 40px;
+  color: #1abc9c;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+#restaurant-page header nav .zipcode {
+  padding-top: 5px;
+  text-align: center;
+  display: inline-block;
+  left: 50%;
+  height: 100%;
+  margin-left: -35px;
+  position: absolute;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#restaurant-page header nav .zipcode p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+}
+#restaurant-page header nav .cart {
+  position: absolute;
+  right: 20px;
+  color: #1abc9c;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+#restaurant-page .restaurant-intro {
+  border-bottom: 1px solid #c8c8c8;
+  margin-top: 40px;
+}
+#restaurant-page .restaurant-intro .food-gallery {
+  height: 240px;
+}
+#restaurant-page .restaurant-intro .food-gallery span.arrow {
+  font-weight: bold;
+  font-size: 24px;
+  color: #1abc9c;
+  position: absolute;
+  top: 120px;
+  z-index: 1;
+}
+#restaurant-page .restaurant-intro .food-gallery span.arrow:first-child {
+  left: 5%;
+}
+#restaurant-page .restaurant-intro .food-gallery span.arrow:last-child {
+  right: 5%;
+}
+#restaurant-page .restaurant-intro .food-gallery .indicator-dots {
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 250px;
+}
+#restaurant-page .restaurant-intro .food-gallery .indicator-dots span {
+  color: #1abc9c;
+  opacity: 0.4;
+}
+#restaurant-page .restaurant-intro .food-gallery .indicator-dots span.is-current {
+  opacity: 0.99;
+}
+#restaurant-page .restaurant-intro .food-gallery img {
+  height: 240px;
+  width: 100%;
+  position: absolute;
+}
+#restaurant-page .restaurant-intro div p {
+  text-align: center;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#restaurant-page .restaurant-intro div .restaurant-name {
+  font-size: 24px;
+  font-family: 'HelveticaNeue', Helvetica, Arial, Sans-Serif;
+  margin-top: 5px;
+}
+#restaurant-page .information {
+  margin-top: 5px;
+  width: 100%;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#restaurant-page .information img {
+  width: 100%;
+}
+#restaurant-page .information p {
+  padding-left: 2%;
+  padding-right: 2%;
+  border-bottom: 1px solid #f7f7f7;
+}
+#restaurant-page .information p:first-child {
+  font-family: 'HelveticaNeue', Helvetica, Arial, Sans-Serif;
+  font-size: 20px;
+}
+#restaurant-page .comments {
+  margin-top: 5px;
+  padding-bottom: 60px;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#restaurant-page .comments span {
+  float: right;
+  margin-right: 5%;
+  font-size: 20px;
+}
+#restaurant-page .comments p {
+  padding-left: 2%;
+  padding-right: 2%;
+  border-bottom: 1px solid #f7f7f7;
+}
+#restaurant-page .comments p:nth-child(2) {
+  font-family: 'HelveticaNeue', Helvetica, Arial, Sans-Serif;
+  font-size: 20px;
+}
+#restaurant-page .comments span {
+  color: #1abc9c;
+}
+#restaurant-page .comments .comment-adding {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#restaurant-page .comments .comment-adding textarea {
+  display: inline-block;
+  width: 75%;
+}
+#restaurant-page .comments .comment-adding button {
+  display: inline-block;
+  margin-bottom: 5%;
+}
+#restaurant-page footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#restaurant-page footer nav {
+  border-top: 1px solid #f7f7f7;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 35px;
+}
+#restaurant-page footer nav a {
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  color: #1abc9c;
+  font-size: 17px;
+  text-decoration: underline;
+}
+#fullmenu-page {
+  font-family: "HelveticaNeue-Light", Arial;
+  top: 0px;
+  height: 100%;
+  background: white;
+}
+#fullmenu-page .scroll-part-x {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+#fullmenu-page ul {
+  list-style: none;
+  margin: 0px;
+}
+#fullmenu-page header {
+  width: 100%;
+  height: 35px;
+  border-bottom: 1px solid #bdbdbd;
+  background: #eeeeee;
+}
+#fullmenu-page header li {
+  width: 33%;
+  display: inline;
+  text-align: center;
+  float: left;
+}
+#fullmenu-page .hide-down {
+  height: 35px;
+  padding-left: 10px;
+  text-align: left;
+  color: #01DFA5;
+  font-size: 26px;
+}
+#fullmenu-page .menu-category {
+  border-bottom: 1px solid #bdbdbd;
+  height: 50px;
+}
+#fullmenu-page .menu-category ul {
+  width: 1000px;
+  line-height: 50px;
+}
+#fullmenu-page .menu-category ul li {
+  width: 200px;
+  height: 50px;
+  display: inline;
+  text-align: center;
+  float: left;
+  border-right: 1px solid #bdbdbd;
+}
+#fullmenu-page .menu-detail .food-lists {
+  border-bottom: 1px solid #bdbdbd;
+  diplay: block;
+  height: 85px;
+}
+#fullmenu-page .menu-detail .food-lists li {
+  display: inline-block;
+  float: left;
+}
+#fullmenu-page .menu-detail .food-lists li p {
+  font-size: 14px;
+}
+#fullmenu-page .menu-detail .food-lists li:nth-child(2) {
+  margin-top: 20px;
+}
+#fullmenu-page .menu-detail .food-lists li:nth-child(3) {
+  float: right;
+  padding-right: 15px;
+}
+#fullmenu-page .menu-detail .food-lists li:nth-child(3) p {
+  text-align: right;
+}
+#fullmenu-page .menu-detail .food-lists .foodname {
+  word-break: keep-all;
+}
+#fullmenu-page .menu-detail img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+#fullmenu-page .menu-detail .blank-area {
+  height: 70px;
+}
+#fullmenu-page footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #04B486;
+  color: white;
+}
+#fullmenu-page footer a {
+  line-height: 30px;
+  color: white;
+  font-weight: normal;
+}
+#fullmenu-page footer a p {
+  display: inline-block;
+  margin-right: 6px;
+}
+#fullmenu-page footer a .badge {
+  background-color: orangered;
+}
+#payment-page {
+  font-family: "HelveticaNeue-Light", Arial;
+  top: 0px;
+  height: 100%;
+  background: white;
+}
+#payment-page ul {
+  list-style: none;
+  margin: 0px;
+}
+#payment-page header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #bdbdbd;
+}
+#payment-page header div {
+  display: inline-block;
+  width: 33%;
+}
+#payment-page header div:nth-child(2) {
+  text-align: center;
+  line-height: 50px;
+  width: 50%;
+  margin-left: -35px;
+}
+#payment-page header div:first-child {
+  padding-left: 10px;
+  font-size: 26px;
+  color: #04B486;
+}
+#payment-page .error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+#payment-page .enter-info .enter-label {
+  height: 50px;
+  border-bottom: 1px solid #bdbdbd;
+}
+#payment-page .enter-info .enter-label p {
+  display: inline-block;
+  font-size: 14px;
+  padding-top: 10px;
+}
+#payment-page .enter-info .enter-label p:first-child {
+  padding-left: 15px;
+}
+#payment-page .enter-info .enter-label p:nth-child(2) {
+  float: right;
+  padding-right: 15px;
+  color: orange;
+}
+#payment-page .enter-info .enter-label p:nth-child(2) span {
+  color: #bdbdbd;
+}
+#payment-page .enter-info .enter-area {
+  margin-left: 5%;
+  margin-top: 20px;
+}
+#payment-page .enter-info .enter-area .form-control {
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  right: 15%;
+}
+#payment-page .delivery-info {
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 20px;
+}
+#payment-page .delivery-info .delivery-time {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 20px;
+}
+#payment-page .delivery-info .delivery-time p {
+  display: inline-block;
+  margin-left: 0;
+  margin-left: 15px;
+  font-size: 14px;
+}
+#payment-page .amount-info {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+#payment-page .amount-info p {
+  display: inline-block;
+  margin-left: 0;
+  margin-left: 15px;
+  font-size: 14px;
+}
+#payment-page .amount-info .inline-style {
+  display: inline-block;
+}
+#payment-page .amount-info .item {
+  color: #bdbdbd;
+}
+#payment-page .amount-info .amount {
+  float: right;
+  padding-right: 15px;
+}
+#payment-page .amount-info li:last-child {
+  border-bottom: 1px solid #bdbdbd;
+}
+#payment-page .amount-info li:last-child p {
+  display: inline-block;
+}
+#payment-page footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+#order-page {
+  font-family: "HelveticaNeue-Light", Arial;
+}
+#order-page header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #bdbdbd;
+}
+#order-page header div {
+  display: inline-block;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+#order-page section {
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+#order-page section .del-time {
+  font-size: 15px;
+}
+#order-page section div p {
+  font-size: 15px;
+}
+#order-page section div p:first-child {
+  background-color: #A4A4A4;
+  color: white;
+}
+#order-page section div.order .res-name {
+  font-weight: bold;
+}
+#order-page section div.order ul {
+  font-size: 15px;
+  list-style: none;
+}
+#order-page section div.order ul li {
+  display: inline-block;
+}
+#order-page section div.order ul li:first-child {
+  width: 50%;
+}
+#order-page section div.order ul li:nth-child(2) {
+  width: 10%;
+}
+#order-page section div.order ul li:last-child {
+  width: 30%;
+  text-align: right;
+}
+#order-page section ul.amount {
+  border-top: 1px solid #bdbdbd;
+  list-style: none;
+}
+#order-page section ul.amount li {
+  margin-left: 30%;
+}
+#order-page section ul.amount p {
+  font-size: 15px;
+  margin: 0;
+  display: inline-block;
+  color: #34495e;
+}
+#order-page section ul.amount p.label {
+  width: 30%;
+  text-align: left;
+}
+#order-page section ul.amount p.price {
+  width: 30%;
+  text-align: right;
+}
+#order-page footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+#order-page footer button a {
+  font-weight: normal;
+  color: white;
+}
+#cart-page {
+  font-family: "HelveticaNeue-Light", Arial;
+  top: 0px;
+  height: 100%;
+  background: white;
+}
+#cart-page ul {
+  list-style: none;
+  margin: 0px;
+}
+#cart-page header {
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #bdbdbd;
+}
+#cart-page header div {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  line-height: 50px;
+}
+#cart-page header a div {
+  position: fixed;
+  left: 0;
+}
+#cart-page header div:nth-child(2) {
+  text-align: center;
+}
+#cart-page header div:first-child {
+  padding-left: 10px;
+  font-size: 26px;
+  color: #04B486;
+  margin-left: 0;
+  left: 0;
+}
+#cart-page .amount-summary {
+  padding-top: 50px;
+  background-color: #e6e6e6;
+  margin-bottom: 50px;
+}
+#cart-page .amount-summary .each-total {
+  background-color: #A4A4A4;
+  height: 60px;
+  padding-top: 15px;
+  color: white;
+}
+#cart-page .amount-summary .each-total p {
+  padding-left: 15px;
+}
+#cart-page .amount-summary .food-detail {
+  background-color: white;
+  border-bottom: 1px solid #bdbdbd;
+}
+#cart-page .amount-summary .food-detail div {
+  display: inline-block;
+}
+#cart-page .amount-summary .food-detail div:first-child {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 15px;
+  border-right: 1px solid #bdbdbd;
+}
+#cart-page .amount-summary .food-detail div:nth-child(2) p {
+  margin: 0px;
+  padding: 0px;
+}
+#cart-page .amount-summary .food-detail div:nth-child(2) .food-name {
+  font-size: 15px;
+}
+#cart-page .amount-summary .food-detail div:nth-child(2) .food-price {
+  font-size: 12px;
+}
+#cart-page .amount-summary .food-detail div:last-child {
+  float: right;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+#cart-page .amount-summary .delivery-text {
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 15px;
+  background-color: white;
+}
+#cart-page .amount-summary .delivery-text div {
+  display: inline-block;
+}
+#cart-page .amount-summary .delivery-text div:first-child {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 15px;
+}
+#cart-page .amount-summary .delivery-text div:nth-child(2) p {
+  margin: 0px;
+  padding: 0px;
+}
+#cart-page .amount-summary .delivery-text div:nth-child(2) p:first-child {
+  font-size: 15px;
+}
+#cart-page .amount-summary .delivery-text div:nth-child(2) p:last-child {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+#cart-page footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+#side-menu {
+  background-color: #6e6e6e;
+  height: 100%;
+  color: #bdbdbd;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#side-menu li {
+  height: 85px;
+  padding-top: 50px;
+  border-bottom: 1px solid #424242;
+}
+#side-menu li span {
+  padding-right: 20px;
+  padding-left: 10px;
+}
+#side-menu .title {
+  text-align: center;
+}
+#side-menu .img-center {
+  margin: 0 auto;
+}
+#side-menu p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: 'HelveticaNeue-Light', Helvetica, Arial, Sans-Serif;
+}
+#account-page {
+  height: 100%;
+  font-family: "HelveticaNeue-Light", Arial;
+  background-color: #E6E6E6;
+}
+#account-page header {
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 40px;
+}
+#account-page header p {
+  padding-top: 20px;
+  display: inline-block;
+  font-size: 22px;
+  width: 90%;
+  padding-left: 32%;
+}
+#account-page header span {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+#account-page .brief-info {
+  background-color: white;
+  border-top: 1px solid #bdbdbd;
+  height: 120px;
+  margin-bottom: 40px;
+}
+#account-page .brief-info .info {
+  display: inline-block;
+  height: 100px;
+  padding-left: 20px;
+}
+#account-page .brief-info .info ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#account-page .brief-info .info ul li:first-child {
+  padding-top: 10px;
+  font-size: 30px;
+}
+#account-page .brief-info .info ul li:nth-child(2) {
+  font-size: 20px;
+  color: #bdbdbd;
+}
+#account-page .brief-info .avatar {
+  display: inline-block;
+}
+#account-page .brief-info .avatar img {
+  margin: 0px;
+  height: 100px;
+  width: 100px;
+  vertical-align: initial;
+}
+#account-page .what-to-do {
+  border-top: 1px solid #bdbdbd;
+  background-color: white;
+  margin-bottom: 70px;
+}
+#account-page .what-to-do li {
+  padding-left: 10px;
+  border-bottom: 1px solid #bdbdbd;
+  height: 60px;
+  font-size: 22px;
+  padding-top: 9px;
+}
+#account-page .what-to-do li span {
+  float: right;
+  padding-right: 10px;
+}
+#account-page .logout {
+  height: 60px;
+  background-color: white;
+  color: red;
+  text-align: center;
+  padding-top: 9px;
+  font-size: 22px;
+  border-bottom: 1px solid #bdbdbd;
+  border-top: 1px solid #bdbdbd;
+}
+#order-history {
+  height: 100%;
+  font-family: "HelveticaNeue-Light", Arial;
+  background-color: #E6E6E6;
+}
+#order-history header {
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 40px;
+}
+#order-history header p {
+  padding-top: 20px;
+  display: inline-block;
+  font-size: 22px;
+  width: 90%;
+  padding-left: 27%;
+}
+#order-history header span {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+#order-history .detail {
+  background-color: white;
+}
+#order-history .detail ul {
+  list-style: none;
+  margin: 0px;
+}
+#order-history .detail ul li {
+  height: 40px;
+  border-top: 1px solid #bdbdbd;
+}
+#order-history .detail ul li p {
+  display: inline-block;
+  text-align: center;
+}
+#order-history .detail ul li p:first-child {
+  width: 25%;
+}
+#order-history .detail ul li p:nth-child(2) {
+  width: 40%;
+}
+#order-history .detail ul li:last-child {
+  border-bottom: 1px solid #bdbdbd;
+}
+#login-page {
+  height: 100%;
+  font-family: "HelveticaNeue-Light", Arial;
+  background-color: #E6E6E6;
+}
+#login-page header {
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 40px;
+}
+#login-page header p {
+  padding-top: 20px;
+  display: inline-block;
+  font-size: 22px;
+  width: 90%;
+  padding-left: 35%;
+}
+#login-page header span {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+#login-page .signin p {
+  text-align: center;
+}
+#login-page .signin .input {
+  text-align: center;
+  width: 100%;
+}
+#login-page .signin button {
+  margin-top: 40px;
+  width: 50%;
+}
+.map-canvas {
+  width: 100%;
+  height: 200px;
+}

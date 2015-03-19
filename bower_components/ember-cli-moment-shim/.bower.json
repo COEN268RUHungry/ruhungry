@@ -1,0 +1,31 @@
+{
+  "name": "ember-cli-moment-shim",
+  "main": [
+    "moment-shim.js"
+  ],
+  "version": "0.0.3",
+  "homepage": "https://github.com/jasonmit/ember-cli-moment-shim",
+  "authors": [
+    "Jason Mitchell <jason.mitchell.w@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": ">=2.7.0"
+  },
+  "_release": "0.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.3",
+    "commit": "7d655bbfbfea7caa425270ee83ed5380725a5f40"
+  },
+  "_source": "git://github.com/jasonmit/ember-cli-moment-shim.git",
+  "_target": "~0.0.3",
+  "_originalSource": "ember-cli-moment-shim",
+  "_direct": true
+}

@@ -1,0 +1,1 @@
+/Users/Fay/Desktop/ruhungry/tmp/class-tmp_cache_dir-lWD893Hb.tmp/assets/ruhungry.js

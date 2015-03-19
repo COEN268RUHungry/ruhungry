@@ -1,0 +1,58 @@
+{{#if isNotFullmenu}}
+<div id="restaurant-page">
+    <header>
+        <nav>
+            {{#link-to 'discover'}}
+                <span class="back"> &lt; Back</span>
+            {{/link-to}}
+            <div class="zipcode">
+                <p>{{zipCode}}</p>
+                <p>{{city}}</p>
+            </div>
+            {{#link-to 'cart'}}
+                <span class="cart glyphicon glyphicon-shopping-cart"></span>
+            {{/link-to}}
+        </nav>
+    </header>
+    <section class="restaurant-intro">
+        {{view "gallery"}}
+
+        <div>
+            <p class="restaurant-name">{{name}}</p>
+            <p>{{type}}</p>
+            <p>TODAY: {{openHours}}</p>
+        </div>
+    </section>
+    <section class="information">
+        <p>Information</p>
+        <p>Accept Credit Card: {{acceptCreditCard}}</p>
+        <p>Phone: {{phone}}</p>
+		<p>Website: <a {{bind-attr href=website}}>{{website}}</a></p>
+        <p class="location">Location: {{address}}</p>
+        {{google-map lat=lat
+             lng=lng
+             zoom=17
+             gopt_zoomControl=false
+             type='map'}}
+    </section>
+    <section class="comments">
+        <span class="glyphicon glyphicon-plus" {{action 'showAddComment'}}></span>
+        <p>Comments</p>
+		{{#each comment in comments}}
+			<p>{{comment.user.name}}: {{comment.content}}</p>
+		{{/each}}
+		{{#if isAddingComment}}
+		<div class='comment-adding'>
+			{{textarea class="form-control" value=inputComment}}
+			<button class="btn btn-primary btn-xs" {{action 'addComment' this}}>Submit</button>
+		</div>
+		{{/if}}
+    </section>
+    <footer>
+        <nav>
+            {{#link-to 'restaurant.fullmenu'}}FULL MENU{{/link-to}}
+        </nav>
+    </footer>
+</div>
+{{/if}}
+{{outlet}}

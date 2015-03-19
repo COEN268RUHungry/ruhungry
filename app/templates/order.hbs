@@ -1,0 +1,43 @@
+<div id="order-page">
+	<header>
+		<div>Order Confirmation</div>
+	</header>
+	<section>
+		<h5>Thank you for your order</h5>
+		<p class="del-time">You Order will be delivered During: {{deliveryTime}}</p>
+		<div>
+			<p>Shipping Adress</p>
+			<p>{{street}}, {{city}} {{zipcode}}</p>
+			<p>Phone: {{phoneNumber}}</p>
+		</div>
+		<div class="order">
+			<p>Order Detail</p>
+			{{#each restaurant in restaurants}}
+			<p class="res-name">{{restaurant.restaurantName}}:  {{restaurant.amount}}</p>
+				{{#each item in restaurant.food}}
+				<ul>
+					<li>{{item.name}}</li>
+					<li>{{item.quantity}}</li>
+					<li>{{item.totalPrice}}</li>
+				</ul>
+				{{/each}}
+			{{/each}}
+		</div>
+		<ul class="amount">
+			<li>
+				<p class="label">Subtotal: </p><p class="price">{{amount}}</p>
+			</li>
+			<li>
+				<p class="label">Tax: </p><p class="price">{{tax}}</p>
+			</li>
+			<li>
+				<p class="label">Total: </p><p class="price">{{totalAmount}}</p>
+			</li>
+		</ul>
+	</section>
+	<footer>
+		 <button class="btn btn-primary btn-lg btn-block">
+		 	{{#link-to 'search'}}Go to HomePage{{/link-to}}
+		 </button>
+	</footer>
+</div>

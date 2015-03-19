@@ -1,0 +1,18 @@
+<div id="login-page">
+<header>
+{{#link-to 'sidemenu'}}
+	 <span class="glyphicon glyphicon-menu-left"></span>
+	 {{/link-to}}
+	<p>Log In</p>
+</header>
+<div class="signin">
+
+<p class="welcome">Welcome Back!</p>
+<p class="sign">SIGN IN WITH YOUR EMAIL TO ORDER DELIVERY</p>
+<div class="input">{{input placeholder="Email" value=inputemail}}</div>
+<div class="input ">{{input placeholder="Password" type="password" value=inputpassword}}</div>
+<div class="input"><button {{action 'save'}} class="btn btn-success">Log In</button></div>
+<div class="input"><button {{action 'newUser'}} class="btn btn-primary">Create User</button></div>
+
+</div>
+</div>

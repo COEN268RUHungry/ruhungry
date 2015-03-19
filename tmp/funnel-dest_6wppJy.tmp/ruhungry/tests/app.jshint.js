@@ -1,0 +1,1 @@
+/Users/Fay/Desktop/ruhungry/tmp/jshinter-tmp_dest_dir-u6cwod1o.tmp/app.jshint.js

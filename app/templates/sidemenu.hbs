@@ -1,0 +1,24 @@
+<div id = "side-menu">
+{{#if login.isLogged}}
+<ul class="side-menu-list">
+<li class="title"><span class="glyphicon glyphicon-list-alt"></span>MENU</li>
+{{#link-to 'discover'}}
+<li><span class="glyphicon glyphicon-cutlery"></span>FOOD AND RESTAURANT</li>
+{{/link-to}}
+{{#link-to 'orderhistory'}}
+<li><span class="glyphicon glyphicon-folder-open"></span>ORDER HISTORY</li>
+{{/link-to}}
+{{#link-to 'account'}}
+<li><span class="glyphicon glyphicon-user"></span>ACCOUNT</li>
+{{/link-to}}
+</ul>
+{{else}}
+<img src="/images/login.jpeg" class="img-responsive img-center">
+{{#link-to 'search'}}<span class="search glyphicon glyphicon-search back-to-search"></span>{{/link-to}}
+<p class=logintext>I know you are hungry,</p>
+<p>but please Login first  ^_^</p>
+{{#link-to 'login'}}
+<p class=loginlink>Click Here to Login</p>
+{{/link-to}}
+{{/if}}
+</div>

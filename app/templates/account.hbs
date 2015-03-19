@@ -1,0 +1,26 @@
+<div id="account-page">
+<header>
+	{{#link-to 'sidemenu'}}
+	 <span class="menu glyphicon glyphicon-menu-hamburger"></span>
+	 {{/link-to}}
+	<p>Account</p>
+</header>
+<div class="brief-info">
+<div class="avatar"><img src="images/avatar_eli.jpg" alt="avatar"></div>
+<div class="info">
+<ul>
+	<li class="name">{{name}}</li>
+	<li class="email">{{email}}</li>
+</ul>
+</div>
+</div>
+<ul class="what-to-do">
+	<li {{action 'toggleAddressDiv'}}>My Address<span class="glyphicon glyphicon-menu-right"></span></li>
+	<div id="address-div" class="hide">{{address}}</div>
+	<li {{action 'togglePaymentDiv'}}>My Payment Method<span class="glyphicon glyphicon-menu-right"></span></li>
+	<div id="payment-div" class="hide">ONLY Visa/Mastercard/Discover/AMEX</div>
+	<li {{action 'toggleContactDiv'}}>Contact Us<span class="glyphicon glyphicon-menu-right"></span></li>
+	<div id="contact-div" class="hide">Contact us by Email:admin@ruhungry.com</div>
+</ul>
+<div {{action 'logout'}}class="logout">Log Out</div>
+</div>

@@ -1,0 +1,1 @@
+/Users/Fay/Desktop/ruhungry/tmp/class-tmp_cache_dir-7TFR6n3y.tmp/assets/vendor.js

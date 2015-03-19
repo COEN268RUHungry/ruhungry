@@ -1,0 +1,10 @@
+<div class="food-gallery" on="swipeLeft swipeRight">
+    <span class="glyphicon glyphicon-menu-left arrow" {{action 'decreaseImage'}}></span>
+    <img {{bind-attr src=foodImage}}/>
+    <div class="indicator-dots">
+        {{#each dot in foodDots}}
+            <span {{bind-attr class="dot.isCurrent"}}>•</span>
+        {{/each}}
+    </div> 
+    <span class="glyphicon glyphicon-menu-right arrow" {{action 'increaseImage'}}></span>
+</div>

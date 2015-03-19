@@ -1,0 +1,43 @@
+<div id="fullmenu-page">
+
+    <header>
+        <ul>
+            <div {{action 'back'}}>
+                <li class="hide-down"><span class = "glyphicon glyphicon-menu-down"></span></li>
+            </div>
+            <li class="text-center">FULL MENU</li>
+        </ul>
+    </header>
+    <div class="menu-category scroll-part-x">
+        <ul>
+			{{#each item in foodCategory}}
+				<li {{bind-attr class="item.isCurrent"}} {{action 'selectCategory' item}}>{{item.property}}</li>
+			{{/each}}
+        </ul>
+    </div>
+    <div class="menu-detail">
+        <ul>
+			{{#each item in currentCategory}}
+				<li class="food-lists">
+                <ul>
+                <li><img class="img-rounded" {{bind-attr src=item.icon}}></li>
+                <li><p class="foodname">{{item.foodName}}</p></li>
+                <li>
+                    <p class="price">{{item.foodPrice}}</p>
+                    <button class="btn btn-primary btn-sm" {{action 'add' item}}>+ ADD</button>
+                </li>
+            </ul>
+            </li>
+			{{/each}}
+            <li class="blank-area">
+            </li>
+        </ul>
+    </div>
+    <footer>
+        {{#link-to 'cart'}}
+            <p>GO TO CART</p>
+            <span class="cart glyphicon glyphicon-shopping-cart"></span>
+            <span class="badge">{{foodQuantity}}</span>
+        {{/link-to}}
+    </footer>
+</div>

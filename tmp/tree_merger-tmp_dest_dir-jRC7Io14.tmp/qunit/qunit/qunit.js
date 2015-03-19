@@ -1,0 +1,1 @@
+/Users/Fay/Desktop/ruhungry/tmp/custom_static_compiler-tmp_dest_dir-0dDsluNA.tmp/qunit/qunit/qunit.js

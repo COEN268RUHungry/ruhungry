@@ -1,0 +1,36 @@
+<div id="cart-page">
+    <header>
+        {{#link-to 'discover'}}
+            <div>&lt;</div>
+        {{/link-to}}
+        <div>SHOPPING CART</div>
+	</header>
+     <div class="amount-summary">
+        <ul>
+            <li>
+				{{#each restaurant in restaurantsList}}
+                <div class="each-total">
+                    <p><span>{{restaurant.restaurantName}}</span> | <span>Total Amount: {{restaurant.amount}}</span></p>                 
+				</div>
+					{{#each item in restaurant.food}}
+					<div class="food-detail">
+						<div>{{item.quantity}}</div>
+						<div>
+						<p class="food-name">{{item.name}}</p>
+						<p class="food-price">{{item.price}} /each</p>
+						</div>
+					<div>
+						<button class="btn btn-primary btn-xs glyphicon glyphicon-minus" {{action 'decrease' item}}></button>
+						<button class="btn btn-primary btn-xs glyphicon glyphicon-plus" {{action 'increase' item}}></button>
+					</div>
+					</div>
+					{{/each}}
+				{{/each}}
+
+            </li>
+        </ul>
+     </div>
+    <footer>
+    	<button class="btn btn-primary btn-lg btn-block" {{action 'checkout'}}>Check Out Now | <span>{{totalAmount}}</span></button>
+    </footer>
+</div>

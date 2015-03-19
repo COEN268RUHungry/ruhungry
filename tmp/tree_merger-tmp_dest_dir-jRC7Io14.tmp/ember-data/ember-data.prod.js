@@ -1,0 +1,1 @@
+/Users/Fay/Desktop/ruhungry/tmp/custom_static_compiler-tmp_dest_dir-R99nWgAE.tmp/ember-data/ember-data.prod.js

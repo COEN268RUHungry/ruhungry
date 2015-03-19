@@ -1,0 +1,1 @@
+/Users/Fay/Desktop/ruhungry/app/controllers/sidemenu.js

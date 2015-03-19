@@ -1,0 +1,33 @@
+<div id="discover-page">
+    <header>
+        <nav>
+            {{#link-to 'sidemenu'}}
+            <span class="menu glyphicon glyphicon-menu-hamburger"></span>
+            {{/link-to}}
+            <p>Discover</p>
+            <span class="search glyphicon glyphicon-search" {{action 'search'}}></span>
+            {{#link-to 'cart'}}
+                <span class="cart glyphicon glyphicon-shopping-cart"></span>
+            {{/link-to}}
+
+        </nav>
+    </header>
+    <div>
+		{{#unless filterSearch}}
+			<p class="not-found">Sorry, No Restaurants Found!</p>
+		{{else}}
+		{{#each restaurant in filterSearch}}
+        <section>
+            {{#link-to 'restaurant' restaurant}}
+                <img {{bind-attr src=restaurant.restaurantImage}} />
+            {{/link-to}}
+            <div>
+                <div class="restaurant-name">{{restaurant.name}}</div>
+                <div class="distance">5.3 mile</div>
+                <div class="type">{{restaurant.type}}</div>                       
+            </div>
+        </section>
+		{{/each}}
+		{{/unless}}
+    </div>
+</div>

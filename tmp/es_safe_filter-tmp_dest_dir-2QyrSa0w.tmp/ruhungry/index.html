@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ruhungry</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    {{content-for 'head'}}
+    <!-- Loading Bootstrap -->
+    <link href="assets/bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="assets/UI/dist/css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/ruhungry.css">
+
+    {{content-for 'head-footer'}}
+  </head>
+  <body>
+    {{content-for 'body'}}
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/ruhungry.js"></script>
+
+    {{content-for 'body-footer'}}
+  </body>
+</html>
